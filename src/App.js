@@ -16,7 +16,6 @@ function App() {
   }, [])
 
   async function handleAddRepository() {
-    // TODO
     const newRepository = {
       title: `Repositorio ${Date.now()}`,
       url: 'www.github.com',
@@ -27,8 +26,6 @@ function App() {
     }
 
     const response = await api.post('repositories', newRepository);
-
-
     setRepositories([...repositories, response.data])
   }
 
